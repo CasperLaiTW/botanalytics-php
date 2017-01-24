@@ -1,4 +1,6 @@
 # Botanalytics-PHP
+[![StyleCI](https://styleci.io/repos/79898405/shield)](https://styleci.io/repos/79898405)
+
 [Botanalytics](https://botanalytics.co/) is a bot analytics service, improves Human-to-Bot interaction.
 
 The package is made you easy to integrate the service.

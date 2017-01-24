@@ -1,4 +1,5 @@
 # Botanalytics-PHP
+[![Build Status](https://travis-ci.org/CasperLaiTW/botanalytics-php.svg)](https://travis-ci.org/CasperLaiTW/botanalytics-php)
 [![StyleCI](https://styleci.io/repos/79898405/shield)](https://styleci.io/repos/79898405)
 
 [Botanalytics](https://botanalytics.co/) is a bot analytics service, improves Human-to-Bot interaction.

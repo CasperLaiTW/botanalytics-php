@@ -1,4 +1,5 @@
 <?php
+namespace Casperlaitw\BotanalyticsPhp\Tests;
 
 use Casperlaitw\BotanalyticsPhp\Client;
 use Casperlaitw\BotanalyticsPhp\Drivers\DriverAbstract;
@@ -44,7 +45,7 @@ class ClientTest extends TestCase
 
         // Act
         try {
-            $client->unknown();
+            $client->unknown([]);
         } catch (UnknownMethodException $ex) {
             return;
         }

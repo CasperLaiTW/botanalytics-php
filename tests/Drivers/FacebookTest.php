@@ -1,4 +1,5 @@
 <?php
+namespace Casperlaitw\BotanalyticsPhp\Tests\Drivers;
 
 use Casperlaitw\BotanalyticsPhp\Drivers\DriverAbstract;
 use Casperlaitw\BotanalyticsPhp\Drivers\Facebook;
@@ -30,21 +31,25 @@ class FacebookTest extends TestCase
     public function missing_endpoint()
     {
         try {
-            new class extends DriverAbstract {
-
-                /**
-                 * Make request body
-                 *
-                 * @return array
-                 */
-                public function make()
-                {
-                }
-            };
+            new FakeDriver();
         } catch (MissEndpointException $ex) {
             return;
         }
 
         $this->fail('Driver create success even missing endpoint');
+    }
+}
+
+class FakeDriver extends DriverAbstract
+{
+
+    /**
+     * Make request body
+     *
+     * @return array
+     */
+    public function make()
+    {
+        // TODO: Implement make() method.
     }
 }

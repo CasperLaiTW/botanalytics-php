@@ -9,5 +9,4 @@ use RuntimeException;
  */
 class MissDriverException extends RuntimeException
 {
-
 }

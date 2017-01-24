@@ -8,5 +8,4 @@ namespace Casperlaitw\BotanalyticsPhp\Exceptions;
  */
 class MissEndpointException extends \RuntimeException
 {
-
 }

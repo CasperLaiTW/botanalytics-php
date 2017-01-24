@@ -33,7 +33,7 @@ class ClientTest extends TestCase
         $client->setDriver($driver);
 
         // Assert
-        $this->assertTrue($client->user());
+        $this->assertTrue($client->user([]));
     }
 
     /** @test */

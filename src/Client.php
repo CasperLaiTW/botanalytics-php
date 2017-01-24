@@ -66,8 +66,8 @@ class Client
             return call_user_func($name, $arguments);
         }
 
-        if (method_exists($this->driver, $name)) {
-            $this->driver->setMessage($arguments);
+        if (method_exists($this->driver, $name) && count($arguments) === 1) {
+            $this->driver->setMessage($arguments[0]);
             return call_user_func([$this->driver, $name]);
         }
 

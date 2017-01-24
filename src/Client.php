@@ -4,6 +4,7 @@ namespace Casperlaitw\BotanalyticsPhp;
 use Casperlaitw\BotanalyticsPhp\Drivers\DriverAbstract;
 use Casperlaitw\BotanalyticsPhp\Drivers\DriverInterface;
 use Casperlaitw\BotanalyticsPhp\Exceptions\MissDriverException;
+use Casperlaitw\BotanalyticsPhp\Exceptions\UnknownMethodException;
 
 /**
  * Class Client
@@ -17,7 +18,7 @@ class Client
     private $token;
 
     /**
-     * @var DriverInterface
+     * @var DriverAbstract
      */
     private $driver;
 
@@ -51,5 +52,25 @@ class Client
         }
 
         $this->driver->setMessage($message)->track();
+    }
+
+    /**
+     * @param $name
+     * @param $arguments
+     * @return mixed
+     * @throws \Casperlaitw\BotanalyticsPhp\Exceptions\UnknownMethodException
+     */
+    public function __call($name, $arguments)
+    {
+        if (method_exists($this, $name)) {
+            return call_user_func($name, $arguments);
+        }
+
+        if (method_exists($this->driver, $name)) {
+            $this->driver->setMessage($arguments);
+            return call_user_func([$this->driver, $name]);
+        }
+
+        throw new UnknownMethodException();
     }
 }

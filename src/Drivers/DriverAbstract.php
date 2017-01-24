@@ -69,16 +69,30 @@ abstract class DriverAbstract implements DriverInterface
     }
 
     /**
+     * Make track
+     *
      * @return \Psr\Http\Message\ResponseInterface
      */
     public function track()
     {
-        return $this->client->request('POST', $this->endpoint, [
+        return $this->request($this->endpoint, $this->make());
+    }
+
+    /**
+     * Request
+     *
+     * @param $uri
+     * @param $data
+     * @return \Psr\Http\Message\ResponseInterface
+     */
+    protected function request($uri, $data)
+    {
+        return $this->client->request('POST', $uri, [
             'headers' => [
                 'Content-Type' => 'application/json',
                 'Authorization' => " Token {$this->token}",
             ],
-            'json' => $this->make(),
+            'json' => $data,
         ]);
     }
 }

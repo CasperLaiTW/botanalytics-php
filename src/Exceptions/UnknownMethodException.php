@@ -1,13 +1,14 @@
 <?php
 
+
 namespace Casperlaitw\BotanalyticsPhp\Exceptions;
 
 use RuntimeException;
 
 /**
- * Class MissEndpointException
+ * Class UnknownMethodException
  * @package Casperlaitw\BotanalyticsPhp\Exceptions
  */
-class MissEndpointException extends RuntimeException
+class UnknownMethodException extends RuntimeException
 {
 }

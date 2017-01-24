@@ -1,6 +1,10 @@
 <?php
 namespace Casperlaitw\BotanalyticsPhp\Drivers;
 
+/**
+ * Class Facebook
+ * @package Casperlaitw\BotanalyticsPhp\Drivers
+ */
 class Facebook extends DriverAbstract
 {
     /**
@@ -20,5 +24,15 @@ class Facebook extends DriverAbstract
             'message' => $this->message['message'],
             'timestamp' => time(),
         ];
+    }
+
+    /**
+     * Send user profile to Botanalytics
+     *
+     * @return \Psr\Http\Message\ResponseInterface
+     */
+    public function user()
+    {
+        return $this->request('https://botanalytics.co/api/v1/facebook-messenger/users/', $this->message);
     }
 }

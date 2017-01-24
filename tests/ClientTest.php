@@ -3,16 +3,11 @@
 use Casperlaitw\BotanalyticsPhp\Client;
 use Casperlaitw\BotanalyticsPhp\Drivers\DriverAbstract;
 use Casperlaitw\BotanalyticsPhp\Exceptions\MissDriverException;
+use Casperlaitw\BotanalyticsPhp\Exceptions\UnknownMethodException;
 use PHPUnit\Framework\TestCase;
-use \Mockery as m;
 
 class ClientTest extends TestCase
 {
-    protected function tearDown()
-    {
-        m::close();
-    }
-
     /** @test */
     public function missing_driver()
     {
@@ -28,10 +23,40 @@ class ClientTest extends TestCase
 
         $this->fail('Client request success event missing driver');
     }
+
+    /** @test */
+    public function can_get_driver_method()
+    {
+        // Arrange
+        $client = new Client('fake-token');
+        $driver = new FakeDriver();
+        $client->setDriver($driver);
+
+        // Assert
+        $this->assertTrue($client->user());
+    }
+
+    /** @test */
+    public function unknown_method()
+    {
+        // Arrange
+        $client = new Client('fake-token');
+
+        // Act
+        try {
+            $client->unknown();
+        } catch (UnknownMethodException $ex) {
+            return;
+        }
+
+        // Assert
+        $this->fail('Run method success even method is not exist');
+    }
 }
 
 class FakeDriver extends DriverAbstract
 {
+    protected $endpoint = 'https://example.com';
 
     /**
      * Make request body
@@ -41,5 +66,10 @@ class FakeDriver extends DriverAbstract
     public function make()
     {
         // TODO: Implement make() method.
+    }
+
+    public function user()
+    {
+        return true;
     }
 }

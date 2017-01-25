@@ -1,9 +1,9 @@
 <?php
-namespace Casperlaitw\BotanalyticsPhp\Drivers;
+namespace Vohinc\BotanalyticsPhp\Drivers;
 
 /**
  * Interface DriverInterface
- * @package Casperlaitw\BotanalyticsPhp\Drivers
+ * @package Vohinc\BotanalyticsPhp\Drivers
  */
 interface DriverInterface
 {

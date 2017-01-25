@@ -1,9 +1,9 @@
 <?php
-namespace Casperlaitw\BotanalyticsPhp\Drivers;
+namespace Vohinc\BotanalyticsPhp\Drivers;
 
 /**
  * Class Facebook
- * @package Casperlaitw\BotanalyticsPhp\Drivers
+ * @package Vohinc\BotanalyticsPhp\Drivers
  */
 class Facebook extends DriverAbstract
 {

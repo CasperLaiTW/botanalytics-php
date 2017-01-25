@@ -1,12 +1,12 @@
 <?php
-namespace Casperlaitw\BotanalyticsPhp\Drivers;
+namespace Vohinc\BotanalyticsPhp\Drivers;
 
-use Casperlaitw\BotanalyticsPhp\Exceptions\MissEndpointException;
+use Vohinc\BotanalyticsPhp\Exceptions\MissEndpointException;
 use GuzzleHttp\Client;
 
 /**
  * Class DriverAbstract
- * @package Casperlaitw\BotanalyticsPhp\Drivers
+ * @package Vohinc\BotanalyticsPhp\Drivers
  */
 abstract class DriverAbstract implements DriverInterface
 {
@@ -34,7 +34,7 @@ abstract class DriverAbstract implements DriverInterface
 
     /**
      * DriverAbstract constructor.
-     * @throws \Casperlaitw\BotanalyticsPhp\Exceptions\MissEndpointException
+     * @throws \Vohinc\BotanalyticsPhp\Exceptions\MissEndpointException
      */
     public function __construct()
     {

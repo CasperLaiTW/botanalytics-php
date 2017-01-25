@@ -1,14 +1,14 @@
 <?php
-namespace Casperlaitw\BotanalyticsPhp;
+namespace Vohinc\BotanalyticsPhp;
 
-use Casperlaitw\BotanalyticsPhp\Drivers\DriverAbstract;
-use Casperlaitw\BotanalyticsPhp\Drivers\DriverInterface;
-use Casperlaitw\BotanalyticsPhp\Exceptions\MissDriverException;
-use Casperlaitw\BotanalyticsPhp\Exceptions\UnknownMethodException;
+use Vohinc\BotanalyticsPhp\Drivers\DriverAbstract;
+use Vohinc\BotanalyticsPhp\Drivers\DriverInterface;
+use Vohinc\BotanalyticsPhp\Exceptions\MissDriverException;
+use Vohinc\BotanalyticsPhp\Exceptions\UnknownMethodException;
 
 /**
  * Class Client
- * @package Casperlaitw\BotanalyticsPhp
+ * @package Vohinc\BotanalyticsPhp
  */
 class Client
 {
@@ -43,7 +43,7 @@ class Client
 
     /**
      * @param $message
-     * @throws \Casperlaitw\BotanalyticsPhp\Exceptions\MissDriverException
+     * @throws \Vohinc\BotanalyticsPhp\Exceptions\MissDriverException
      */
     public function request($message)
     {
@@ -58,7 +58,7 @@ class Client
      * @param $name
      * @param $arguments
      * @return mixed
-     * @throws \Casperlaitw\BotanalyticsPhp\Exceptions\UnknownMethodException
+     * @throws \Vohinc\BotanalyticsPhp\Exceptions\UnknownMethodException
      */
     public function __call($name, $arguments)
     {

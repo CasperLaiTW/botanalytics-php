@@ -1,12 +1,12 @@
 <?php
 
-namespace Casperlaitw\BotanalyticsPhp\Exceptions;
+namespace Vohinc\BotanalyticsPhp\Exceptions;
 
 use RuntimeException;
 
 /**
  * Class MissEndpointException
- * @package Casperlaitw\BotanalyticsPhp\Exceptions
+ * @package Vohinc\BotanalyticsPhp\Exceptions
  */
 class MissEndpointException extends RuntimeException
 {

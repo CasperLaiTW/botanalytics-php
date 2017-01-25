@@ -1,11 +1,11 @@
 <?php
-namespace Casperlaitw\BotanalyticsPhp\Exceptions;
+namespace Vohinc\BotanalyticsPhp\Exceptions;
 
 use RuntimeException;
 
 /**
  * Class MissDriverException
- * @package Casperlaitw\BotanalyticsPhp\Exceptions
+ * @package Vohinc\BotanalyticsPhp\Exceptions
  */
 class MissDriverException extends RuntimeException
 {

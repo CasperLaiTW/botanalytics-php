@@ -1,13 +1,13 @@
 <?php
 
 
-namespace Casperlaitw\BotanalyticsPhp\Exceptions;
+namespace Vohinc\BotanalyticsPhp\Exceptions;
 
 use RuntimeException;
 
 /**
  * Class UnknownMethodException
- * @package Casperlaitw\BotanalyticsPhp\Exceptions
+ * @package Vohinc\BotanalyticsPhp\Exceptions
  */
 class UnknownMethodException extends RuntimeException
 {

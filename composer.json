@@ -1,5 +1,5 @@
 {
-    "name": "casperlaitw/botanalytics-php",
+    "name": "vohinc/botanalytics-php",
     "description": "Botanalytics for PHP application",
     "type": "library",
     "keywords": [
@@ -25,12 +25,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Casperlaitw\\BotanalyticsPhp\\": "src"
+            "Vohinc\\BotanalyticsPhp\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Casperlaitw\\BotanalyticsPhp\\Tests\\": "tests/"
+            "Vohinc\\BotanalyticsPhp\\Tests\\": "tests/"
         }
     }
 }

@@ -1,9 +1,9 @@
 <?php
-namespace Casperlaitw\BotanalyticsPhp\Tests\Drivers;
+namespace Vohinc\BotanalyticsPhp\Tests\Drivers;
 
-use Casperlaitw\BotanalyticsPhp\Drivers\DriverAbstract;
-use Casperlaitw\BotanalyticsPhp\Drivers\Facebook;
-use Casperlaitw\BotanalyticsPhp\Exceptions\MissEndpointException;
+use Vohinc\BotanalyticsPhp\Drivers\DriverAbstract;
+use Vohinc\BotanalyticsPhp\Drivers\Facebook;
+use Vohinc\BotanalyticsPhp\Exceptions\MissEndpointException;
 use PHPUnit\Framework\TestCase;
 
 class FacebookTest extends TestCase

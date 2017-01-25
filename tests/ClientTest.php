@@ -1,10 +1,10 @@
 <?php
-namespace Casperlaitw\BotanalyticsPhp\Tests;
+namespace Vohinc\BotanalyticsPhp\Tests;
 
-use Casperlaitw\BotanalyticsPhp\Client;
-use Casperlaitw\BotanalyticsPhp\Drivers\DriverAbstract;
-use Casperlaitw\BotanalyticsPhp\Exceptions\MissDriverException;
-use Casperlaitw\BotanalyticsPhp\Exceptions\UnknownMethodException;
+use Vohinc\BotanalyticsPhp\Client;
+use Vohinc\BotanalyticsPhp\Drivers\DriverAbstract;
+use Vohinc\BotanalyticsPhp\Exceptions\MissDriverException;
+use Vohinc\BotanalyticsPhp\Exceptions\UnknownMethodException;
 use PHPUnit\Framework\TestCase;
 
 class ClientTest extends TestCase

@@ -22,7 +22,7 @@ class Facebook extends DriverAbstract
         return [
             'recipient' => $this->message['recipient'],
             'message' => $this->message['message'],
-            'timestamp' => time(),
+            'timestamp' => time() * 1000,
         ];
     }
 
